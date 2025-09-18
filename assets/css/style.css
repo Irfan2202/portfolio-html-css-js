@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.navbar {
+  display: flex;
+}
+
+.brand a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+}
+
+nav {
+  background-color: rgb(70, 70, 220);
+  padding: 1rem 4rem;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+}
+
+.nav-links a:hover {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+section.about {
+  background-color: lightgray;
+}
+
+.about {
+  padding: 1rem 4rem;
+  grid-column: auto;
+}
+
+.content h2,
+.content p {
+  margin: 1rem 0;
+}
+.about img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  margin-left: 200px;
+}
+
+.about button {
+  width: 150px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgb(70, 70, 220);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  margin: 1rem 0.5rem;
+  border-radius: 10px;
+}
+
+.about button:hover {
+  background-color: white;
+  color: rgb(70, 70, 220);
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}
