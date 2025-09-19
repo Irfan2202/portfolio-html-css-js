@@ -129,6 +129,10 @@ section.about {
   margin: 2rem;
   color: rgb(70, 70, 220);
 }
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+}
 @media screen and (max-width: 600px) {
   .nav-links {
     display: none;
