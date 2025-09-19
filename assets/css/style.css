@@ -35,6 +35,10 @@ nav {
   background-color: rgb(70, 70, 220);
   padding: 1rem 4rem;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .nav-links {
@@ -59,18 +63,22 @@ section.about {
 }
 
 .about {
-  padding: 1rem 4rem;
+  padding: 5rem 4rem;
   grid-column: auto;
 }
 
 .content h2,
+.card {
+  font-size: 2rem;
+  margin: 3rem 0;
+}
 .content p {
   margin: 1rem 0;
 }
 .about img {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
   margin-left: 200px;
 }
 
@@ -91,7 +99,36 @@ section.about {
   background-color: white;
   color: rgb(70, 70, 220);
 }
+.portfolio {
+  padding: 5rem 4rem;
+}
+.project {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.card .container {
+  width: 300px;
+  height: 200px;
+}
+.card h4 {
+  margin: auto;
+  width: 50%;
+}
+
+.card i {
+  font-size: 6rem;
+  margin: 2rem;
+  color: rgb(70, 70, 220);
+}
 @media screen and (max-width: 600px) {
   .nav-links {
     display: none;
