@@ -12,9 +12,16 @@ section {
   min-height: 100vh;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .column {
-  float: left;
-  width: 50%;
+  flex: 1 1 50%; /* di layar besar 50% */
+  padding: 1rem;
 }
 .title {
   font-size: 2rem;
@@ -61,12 +68,11 @@ nav {
   display: none;
 }
 section.about {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 
 .about {
   padding: 5rem 4rem;
-  grid-column: auto;
 }
 
 .content h2,
@@ -158,5 +164,23 @@ section.about {
     cursor: pointer;
     margin-top: -0.5rem;
     z-index: 3;
+  }
+  .column {
+    flex: 1 1 100%;
+  }
+
+  .about img {
+    width: 250px;
+    height: 250px;
+    margin-left: 0;
+  }
+
+  .about {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
   }
 }
