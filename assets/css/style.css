@@ -19,10 +19,6 @@ section {
   align-items: center;
 }
 
-.column {
-  flex: 1 1 50%; /* di layar besar 50% */
-  padding: 1rem;
-}
 .title {
   font-size: 2rem;
   text-align: center;
@@ -37,6 +33,8 @@ section {
   font-weight: bolder;
   color: white;
 }
+
+/* Navbar */
 
 nav {
   background-color: rgb(70, 70, 220);
@@ -64,15 +62,20 @@ nav {
   font-size: 1.3rem;
   font-weight: bold;
 }
+
 .menu-button {
   display: none;
 }
+
+/* About Section */
+
 section.about {
   background-color: lightblue;
 }
 
 .about {
-  padding: 5rem 4rem;
+  padding: 2rem 4rem;
+  margin: 2rem 0;
 }
 
 .content h2,
@@ -80,9 +83,16 @@ section.about {
   font-size: 2rem;
   margin: 3rem 0;
 }
+
 .content p {
   margin: 1rem 0;
 }
+
+.about .column {
+  flex: 1 1 50%;
+  padding: 1rem;
+}
+
 .about img {
   width: 400px;
   height: 400px;
@@ -107,15 +117,19 @@ section.about {
   background-color: white;
   color: rgb(70, 70, 220);
 }
+
+/* Portfolio Section */
 .portfolio {
   padding: 5rem 4rem;
 }
-.project {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
+.portfolio .title {
+  margin-bottom: 3rem;
 }
 
+.portfolio .row {
+  margin-top: 2rem;
+  gap: 3rem;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
   transition: 0.3s;
@@ -124,7 +138,7 @@ section.about {
   margin: auto;
 }
 .card .container {
-  width: 300px;
+  width: 400px;
   height: 200px;
 }
 .card h4 {
@@ -140,6 +154,15 @@ section.about {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 992px) {
+  .about {
+    padding: 1rem 2rem;
+  }
+  .about .column {
+    flex: 1 1 50%;
+    padding: 1rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar .brand {
@@ -165,9 +188,6 @@ section.about {
     margin-top: -0.5rem;
     z-index: 3;
   }
-  .column {
-    flex: 1 1 100%;
-  }
 
   .about img {
     width: 250px;
@@ -179,8 +199,22 @@ section.about {
     padding: 3rem 1rem;
     text-align: center;
   }
-
+  .about .column {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
   .content h2 {
     font-size: 1.5rem;
+  }
+
+  .portfolio {
+    padding: 3rem 1rem;
+  }
+
+  .card h4 {
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 }
