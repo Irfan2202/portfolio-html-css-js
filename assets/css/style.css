@@ -82,7 +82,8 @@ section.about {
 }
 
 .about,
-.services {
+.services,
+.contact {
   padding: 2rem 4rem;
 }
 
@@ -126,7 +127,9 @@ section.about {
 }
 
 /* services Section */
-
+section.services {
+  background-color: lightskyblue;
+}
 .services .title {
   margin-bottom: 3rem;
 }
@@ -139,6 +142,7 @@ section.about {
   flex: 1 1 30%;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .card {
@@ -147,9 +151,10 @@ section.about {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
+  max-width: 400px;
+  min-width: 350px;
   height: 250px;
-  margin: 1rem;
+  background-color: white;
 }
 
 .card i {
@@ -167,6 +172,67 @@ section.about {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }
 
+/* Contact */
+section.contact {
+  background-color: lightblue;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type="email"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2rem;
+}
+
+footer {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 @media screen and (max-width: 992px) {
   .about {
     padding: 1rem 2rem;
@@ -180,9 +246,11 @@ section.about {
     height: 250px;
     margin-left: 0;
   }
-
-  .card .container {
-    max-width: 250px;
+  .services .column {
+    margin: 2rem;
+  }
+  .card {
+    max-width: 100%;
   }
 
   .services .row {
@@ -264,17 +332,19 @@ section.about {
 
   .services {
     padding: 3rem 1rem;
+    align-items: center;
   }
 
   .services .row {
     margin-top: 1rem;
     gap: 1rem;
+    justify-content: center;
   }
   .services .column {
     flex: 1 1 100%;
   }
-  .card .container {
-    max-width: 200px;
+  .card {
+    width: 90% auto;
   }
 
   .card i {
