@@ -82,15 +82,13 @@ section.about {
 }
 
 .about,
-.portfolio {
+.services {
   padding: 2rem 4rem;
-  margin: 2rem 0;
 }
 
 .content h2,
 .card {
   font-size: 2rem;
-  margin: 3rem 0;
 }
 
 .content p {
@@ -127,20 +125,20 @@ section.about {
   color: rgb(70, 70, 220);
 }
 
-/* Portfolio Section */
+/* services Section */
 
-.portfolio .title {
+.services .title {
   margin-bottom: 3rem;
 }
 
-.portfolio .row {
-  margin-top: 2rem;
-  gap: 1rem;
+.services .row {
+  margin-top: 1rem;
 }
 
-.portfolio .column {
+.services .column {
   flex: 1 1 30%;
-  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -149,22 +147,13 @@ section.about {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  width: 100%;
-}
-
-.card .container {
-  width: 100%;
-  max-width: 300px;
-  aspect-ratio: 2/1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 350px;
+  height: 250px;
+  margin: 1rem;
 }
 
 .card i {
-  margin-top: 1rem;
+  margin: 1rem;
   font-size: 4rem;
   color: rgb(70, 70, 220);
 }
@@ -196,7 +185,12 @@ section.about {
     max-width: 250px;
   }
 
-  .portfolio .column {
+  .services .row {
+    margin-top: 0.5rem;
+    gap: 1rem;
+  }
+
+  .services .column {
     flex: 1 1 45%;
   }
 }
@@ -259,6 +253,7 @@ section.about {
     padding: 3rem 1rem;
     text-align: center;
   }
+
   .about .column {
     flex: 1 1 100%;
     padding: 1rem;
@@ -267,11 +262,15 @@ section.about {
     font-size: 1.5rem;
   }
 
-  .portfolio {
+  .services {
     padding: 3rem 1rem;
   }
 
-  .portfolio .column {
+  .services .row {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .services .column {
     flex: 1 1 100%;
   }
   .card .container {
